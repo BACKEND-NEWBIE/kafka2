@@ -1,3 +1,13 @@
+# Kafka 스터디
+
+## 스터디 방안
+각자 책을 읽어온 뒤 스터디 시간에 같이 AWS로 실습을 진행하려 한다.
+
+## AWS 계정 정보
+구글 계정: backend.newbie.study@gmail.com
+
+* * *
+
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOuwMj%2FbtrhPBcrc3r%2FAkt1a7QwXamKWBqBLxC1UK%2Fimg.png" width="600px">
 
 # 실전 카프카 개발부터 운영까지
