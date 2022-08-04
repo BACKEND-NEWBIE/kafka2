@@ -6,6 +6,58 @@
 ## AWS 계정 정보
 구글 계정: backend.newbie.study@gmail.com
 
+## 실습 꿀팁
+### 로컬 DNS 등록
+/etc/hosts 파일에 dns등록. (그때그때 확인해서 변경)
+```
+아이피 peter-ansible01.foo.bar peter-ansible01
+아이피 peter-zk01.foo.bar peter-zk01
+아이피 peter-zk02.foo.bar peter-zk02
+아이피 peter-zk03.foo.bar peter-zk03
+아이피 peter-kafka01.foo.bar peter-kafka01
+아이피 peter-kafka02.foo.bar peter-kafka02
+아이피 peter-kafka03.foo.bar peter-kafka03
+```
+
+### 키 모드 변경
+```
+chmod 600 키위치
+```
+### 각 서버에 접속
+```
+ssh -i 키위치 ec2-user@peter-ansible01
+ssh -i 키위치 ec2-user@peter-zk01
+ssh -i 키위치 ec2-user@peter-zk02
+ssh -i 키위치 ec2-user@peter-zk03
+ssh -i 키위치 ec2-user@peter-kafka01
+ssh -i 키위치 ec2-user@peter-kafka02
+ssh -i 키위치 ec2-user@peter-kafka03
+```
+### 주키퍼 실행 후, 카프카 실행.
+```
+sudo systemctl start zookeeper-server
+sudo systemctl start kafka-server
+```
+
+### 기본 명령어
+```
+# 기본 컨슈머
+/usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server peter-kafka01.foo.bar:9092 --topic 토픽이름
+
+# 기본 프로듀서
+/usr/local/kafka/bin/kafka-console-producer.sh --bootstrap-server peter-kafka01.foo.bar:9092 --topic 토픽이름
+```
+### 예제 파일 실행
+```
+mvn compile exec:java -Dexec.mainClass="ConsumerSync"
+```
+
+### 카프카 종료 후, 주키퍼 종료. (마지막)
+```
+sudo systemctl start zookeeper-server
+sudo systemctl start kafka-server
+```
+
 * * *
 
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOuwMj%2FbtrhPBcrc3r%2FAkt1a7QwXamKWBqBLxC1UK%2Fimg.png" width="600px">
