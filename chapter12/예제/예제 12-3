@@ -19,14 +19,14 @@ value_schema_str = """
 value_schema = avro.loads(value_schema_str)
 
 c = AvroConsumer({
-    'bootstrap.servers': 'peter-zk01.foo.bar,peter-zk02.foo.bar,peter-zk03.foo.bar',
+    'bootstrap.servers': 'zk01,zk02,zk03',
     'group.id': 'python-groupid01',
     'auto.offset.reset': 'earliest',
-    'schema.registry.url': 'http://peter-kafka03.foo.bar:8081'},reader_value_schema=value_schema)
+    'schema.registry.url': 'http://kafka03:8081'},reader_value_schema=value_schema)
 
 c.subscribe(['src.peter-avro01-kafka1'])
 
-es = Elasticsearch('peter-kafka02.foo.bar:9200')
+es = Elasticsearch('kafka02:9200')
 index = 'students-' + str(datetime.now().date())
 
 while True:

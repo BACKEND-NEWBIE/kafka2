@@ -18,7 +18,7 @@
 
     - name: delete znode
       znode:
-        hosts: 'peter-zk01.foo.bar:2181'
+        hosts: 'zk01:2181'
         name: "/{{ item }}"
         recursive: yes
         state: absent

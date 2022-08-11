@@ -8,7 +8,7 @@ import java.util.Properties;
 public class ConsumerAuto {
     public static void main(String[] args) {
         Properties props = new Properties(); //Properties 오브젝트를 시작합니다.
-        props.put("bootstrap.servers", "peter-kafka01.foo.bar:9092,peter-kafka02.foo.bar:9092,peter-kafka03.foo.bar:9092"); //브로커 리스트를 정의합니다.
+        props.put("bootstrap.servers", "kafka01:9092,kafka02:9092,kafka03:9092"); //브로커 리스트를 정의합니다.
         props.put("group.id", "peter-consumer01"); //컨슈머 그룹 아이디 정의합니다.
         props.put("enable.auto.commit", "true"); //자동 커밋을 사용합니다.
         props.put("auto.offset.reset", "latest"); //컨슈머 오프셋을 찾지 못하는 경우 latest로 초기화 합니다. 가장 최근부터 메시지를 가져오게 됩니다.

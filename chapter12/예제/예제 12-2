@@ -17,10 +17,10 @@ value_schema_str = """
 value_schema = avro.loads(value_schema_str)
 
 c = AvroConsumer({
-    'bootstrap.servers': 'peter-kafka01.foo.bar,peter-kafka02.foo.bar,peter-kafka03.foo.bar',
+    'bootstrap.servers': 'kafka01,kafka02,kafka03',
     'group.id': 'python-groupid01',
     'auto.offset.reset': 'earliest',
-    'schema.registry.url': 'http://peter-kafka03.foo.bar:8081'},reader_value_schema=value_schema)
+    'schema.registry.url': 'http://kafka03:8081'},reader_value_schema=value_schema)
 
 c.subscribe(['peter-avro01-kafka1'])
 

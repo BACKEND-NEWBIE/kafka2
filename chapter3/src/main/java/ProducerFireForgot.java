@@ -7,7 +7,7 @@ import java.util.Properties;
 public class ProducerFireForgot {
     public static void main(String[] args) {
         Properties props = new Properties(); //Properties 오브젝트를 시작합니다.
-        props.put("bootstrap.servers", "peter-kafka01.foo.bar:9092,peter-kafka02.foo.bar:9092,peter-kafka03.foo.bar:9092"); //브로커 리스트를 정의합니다.
+        props.put("bootstrap.servers", "kafka01:9092,kafka02:9092,kafka03:9092"); //브로커 리스트를 정의합니다.
         props.put("key.serializer",
                 "org.apache.kafka.common.serialization.StringSerializer"); //메시지 키와 벨류에 문자열을 지정하므로 내장된 StringSerializer를 지정합니다.
         props.put("value.serializer",

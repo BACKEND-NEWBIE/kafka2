@@ -2,7 +2,7 @@ from confluent_kafka import Consumer
 import socket
 
 hostname = socket.gethostname()
-broker = 'peter-kafka01.foo.bar'
+broker = 'kafka01'
 group = 'peter-consumer02'
 topic = 'peter-test06'
 

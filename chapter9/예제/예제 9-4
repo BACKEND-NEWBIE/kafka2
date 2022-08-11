@@ -3,5 +3,5 @@ KafkaServer {
     useKeyTab=true
     storeKey=true
     keyTab="/usr/local/kafka/keytabs/peter-kafka01.service.keytab"
-    principal="kafka/peter-kafka01.foo.bar@FOO.BAR";
+    principal="kafka/kafka01@FOO.BAR";
 };

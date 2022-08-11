@@ -46,4 +46,4 @@
     image: hlebalbau/kafka-manager:stable
     network_mode: host
     env:
-      ZK_HOSTS: "peter-zk01.foo.bar:2181,peter-zk02.foo.bar:2181,peter-zk03.foo.bar:2181"
+      ZK_HOSTS: "zk01:2181,zk02:2181,zk03:2181"

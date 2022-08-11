@@ -1,18 +1,18 @@
 [zkhosts]
-peter-zk01.foo.bar
-peter-zk02.foo.bar
-peter-zk03.foo.bar
+zk01
+zk02
+zk03
 
 [kafkahosts]
-peter-kafka01.foo.bar
-peter-kafka02.foo.bar
-peter-kafka03.foo.bar
+kafka01
+kafka02
+kafka03
 
 [schemaregistry]
-peter-kafka03.foo.bar
+kafka03
 
 [elasticsearch]
-peter-kafka02.foo.bar
+kafka02
 
 [monitoring]
-peter-kafka01.foo.bar
+kafka01

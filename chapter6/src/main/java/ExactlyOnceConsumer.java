@@ -10,7 +10,7 @@ import java.util.Properties;
 
 public class ExactlyOnceConsumer {
     public static void main(String[] args) {
-        String bootstrapServers = "peter-kafka01.foo.bar:9092";
+        String bootstrapServers = "kafka01:9092";
         Properties props = new Properties();
         props.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
         props.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());

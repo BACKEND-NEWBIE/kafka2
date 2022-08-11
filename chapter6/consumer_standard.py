@@ -1,6 +1,6 @@
 from confluent_kafka import Consumer
 
-broker = 'peter-kafka01.foo.bar, peter-kafka02.foo.bar, peter-kafka03.foo.bar'
+broker = 'kafka01, kafka02, kafka03'
 group = 'peter-consumer01'
 topic = 'peter-test06'
 

@@ -28,9 +28,9 @@ def delivery_report(err, msg):
         print('Message delivered to {} [{}]'.format(msg.topic(), msg.offset()))
 
 avroProducer = AvroProducer({
-    'bootstrap.servers': 'peter-kafka01.foo.bar,peter-kafka02.foo.bar,peter-kafka03.foo.bar',
+    'bootstrap.servers': 'kafka01,kafka02,kafka03',
     'on_delivery': delivery_report,
-    'schema.registry.url': 'http://peter-kafka03.foo.bar:8081'
+    'schema.registry.url': 'http://kafka03:8081'
     }, default_value_schema=value_schema)
 
 for x in range(50000):

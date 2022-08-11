@@ -17,7 +17,7 @@ P336
 sudo vi /etc/systemd/system/schema-registry.service
 sudo systemctl daemon-reload
 sudo systemctl start schema-registry
-curl -X GET http://peter-kafka03.foo.bar:8081/config
+curl -X GET http://kafka03:8081/config
 
 P340
 sudo yum -y install python3
@@ -30,7 +30,7 @@ python python-avro-producer.py
 
 P344
 python python-avro-consumer.py
-curl http://peter-kafka03.foo.bar:8081/schemas | python -m json.tool
+curl http://kafka03:8081/schemas | python -m json.tool
 
 P347
 python python-avro-producer2.py
@@ -47,11 +47,11 @@ python python-avro-producer.py
 python python-avro-consumer2.py
 
 P351
-curl http://peter-kafka03.foo.bar:8081/subjects/peter-avro2-value/versions | python -m json.tool
+curl http://kafka03:8081/subjects/peter-avro2-value/versions | python -m json.tool
 
 P356
 sudo systemctl restart schema-registry
-curl -X GET http://peter-kafka03.foo.bar:8081/config
+curl -X GET http://kafka03:8081/config
 
 P358
 python python-avro-producer_v1.py

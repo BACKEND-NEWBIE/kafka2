@@ -11,12 +11,12 @@
 /etc/hosts 파일에 dns등록. (그때그때 확인해서 변경)
 ```
 아이피 peter-ansible01.foo.bar peter-ansible01
-아이피 peter-zk01.foo.bar peter-zk01
-아이피 peter-zk02.foo.bar peter-zk02
-아이피 peter-zk03.foo.bar peter-zk03
-아이피 peter-kafka01.foo.bar peter-kafka01
-아이피 peter-kafka02.foo.bar peter-kafka02
-아이피 peter-kafka03.foo.bar peter-kafka03
+아이피 zk01 peter-zk01
+아이피 zk02 peter-zk02
+아이피 zk03 peter-zk03
+아이피 kafka01 peter-kafka01
+아이피 kafka02 peter-kafka02
+아이피 kafka03 peter-kafka03
 ```
 
 ### 키 모드 변경
@@ -42,10 +42,10 @@ sudo systemctl start kafka-server
 ### 기본 명령어
 ```
 # 기본 컨슈머
-/usr/local/kafka/bin/kafka-console-consumer.sh --bootstrap-server peter-kafka01.foo.bar:9092 --topic 토픽이름
+kafka-console-consumer.sh --bootstrap-server kafka01:9092 --topic 토픽이름
 
 # 기본 프로듀서
-/usr/local/kafka/bin/kafka-console-producer.sh --bootstrap-server peter-kafka01.foo.bar:9092 --topic 토픽이름
+kafka-console-producer.sh --bootstrap-server kafka01:9092 --topic 토픽이름
 ```
 ### 예제 파일 실행
 ```

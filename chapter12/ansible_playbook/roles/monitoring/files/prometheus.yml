@@ -7,41 +7,41 @@ scrape_configs:
   - job_name: 'peter-jmx-kafka1'
     static_configs:
       - targets:
-        - peter-kafka01.foo.bar:7071
-        - peter-kafka02.foo.bar:7071
-        - peter-kafka03.foo.bar:7071
+        - kafka01:7071
+        - kafka02:7071
+        - kafka03:7071
 
   - job_name: 'peter-jmx-kafka2'
     static_configs:
       - targets:
-        - peter-zk01.foo.bar:7071
-        - peter-zk02.foo.bar:7071
-        - peter-zk03.foo.bar:7071
+        - zk01:7071
+        - zk02:7071
+        - zk03:7071
 
   - job_name: 'peter-kafka1-exporter'
     static_configs:
       - targets:
-        - peter-kafka01.foo.bar:9308
-        - peter-kafka02.foo.bar:9308
-        - peter-kafka03.foo.bar:9308
+        - kafka01:9308
+        - kafka02:9308
+        - kafka03:9308
 
   - job_name: 'peter-kafka2-exporter'
     static_configs:
       - targets:
-        - peter-zk01.foo.bar:9308
-        - peter-zk02.foo.bar:9308
-        - peter-zk03.foo.bar:9308
+        - zk01:9308
+        - zk02:9308
+        - zk03:9308
 
   - job_name: 'node-exporter-kafka1'
     static_configs:
       - targets:
-        - peter-kafka01.foo.bar:9100
-        - peter-kafka02.foo.bar:9100
-        - peter-kafka03.foo.bar:9100
+        - kafka01:9100
+        - kafka02:9100
+        - kafka03:9100
 
   - job_name: 'node-exporter-kafka2'
     static_configs:
       - targets:
-        - peter-zk01.foo.bar:9100
-        - peter-zk02.foo.bar:9100
-        - peter-zk03.foo.bar:9100
+        - zk01:9100
+        - zk02:9100
+        - zk03:9100

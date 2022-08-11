@@ -20,4 +20,4 @@
         image: docker.elastic.co/kibana/kibana:7.12.1
         network_mode: host
         env:
-          ELASTICSEARCH_HOSTS: "http://peter-kafka02.foo.bar:9200"
+          ELASTICSEARCH_HOSTS: "http://kafka02:9200"
